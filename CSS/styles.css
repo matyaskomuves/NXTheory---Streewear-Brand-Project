@@ -1,0 +1,219 @@
+:root {
+    --color-bg: #323031;
+    --color-font: #f7f5fb;
+    --color-accent: #9a2ca0;
+    --color-accent-2: #009ddc;
+}
+
+/* Global Settings */
+
+body {
+    color: var(--color-font);
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    font-family: 'Orbitron', 'Helvetica Neue', Helvetica, Arial;
+    overflow-x: hidden;
+}
+
+p {
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Nav Bar */
+
+.navbar {
+    color: var(--color-font) !important;
+    background-color: var(--color-bg) !important;
+    animation: navFadeIn 1s ease 0s 1 normal forwards;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--color-accent) !important;
+}
+
+.nav-link:hover {
+    color: var(--color-accent) !important;
+}
+
+/* Hero Section */
+
+.hero {
+    height: fit-content;
+    width: fit-content;
+}
+
+.hero-content {
+    height: 100vh;
+    width: 100vw;
+}
+
+.men {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/pictures/mens.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadeInMen 2s ease 0s 1 normal forwards;
+}
+
+.women {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/pictures/womans.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadeInWomen 2s ease 0s 1 normal forwards;
+}
+
+.btn-primary {
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-bg);
+    color: var(--color-font);
+    border: 3px solid var(--color-accent);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    border: none;
+    scale: 1.2;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* Outfits Section */
+
+.outfit-image {
+    width: 100%;
+    height: 90%;
+}
+
+/* offcanvas */
+
+.offcanvas {
+    background-color: var(--color-bg);
+    color: var(--color-font);
+}
+
+.btn-close {
+    background-color: var(--color-font) !important;
+}
+
+.offcanvasItem {
+    text-decoration: none;
+    color: var(--color-font);
+    font-size: x-large;
+}
+
+.offcanvasItem:hover {
+    color: var(--color-accent);
+}
+
+.newArrivals {
+    font-weight: bolder;
+    font-size: 1.75rem;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--color-bg);
+    color: var(--color-font);
+    padding: 20px;
+}
+
+.fa-brands {
+    margin: 1rem;
+    color: var(--color-accent);
+    transition: all 0.2s ease;
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.fa-brands:active {
+    scale: 1.5;
+}
+
+/* Classes for JavaScript */
+
+.notInView {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateX(80px);
+}
+
+.inView {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.2s;
+}
+
+.btn-onclick {
+    scale: 2.5;
+    transform: translateX(200px);
+    transition: all 0.5s ease;
+}
+
+.btn-onclick-right {
+    scale: 2.5;
+    transform: translateX(-200px);
+    transition: all 0.5s ease;
+}
+
+/* Animations */
+
+@keyframes navFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        letter-spacing: 15px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.5px;
+    }
+}
+
+@keyframes fadeInMen {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInWomen {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
