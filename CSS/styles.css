@@ -173,7 +173,7 @@ ul {
     transition-delay: 0.2s;
 }
 
-.btn-onclick {
+/* .btn-onclick {
     scale: 2.5;
     transform: translateX(200px);
     transition: all 0.5s ease;
@@ -183,7 +183,7 @@ ul {
     scale: 2.5;
     transform: translateX(-200px);
     transition: all 0.5s ease;
-}
+} */
 
 /* Animations */
 
