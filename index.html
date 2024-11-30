@@ -141,7 +141,7 @@
             <h6 class="display-6 notInView">To get notified about new releases, sales and special discounts.</h6>
         </div>
         <div class="container notInView">
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation">
                 <div class="mb-3">
                     <label for="email" class="form-label visually-hidden">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
@@ -149,7 +149,7 @@
                         Please enter a valid email address.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-50">Subscribe</button>
+                <button type="button" onclick="subscribeValidation()" class="btn btn-primary w-50">Subscribe</button>
             </form>
         </div>
         </div>

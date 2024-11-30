@@ -28,3 +28,32 @@ document.querySelectorAll('.notInView').forEach(el => {
 // document.querySelector('.btn-close').addEventListener('click', () => {
 //     document.querySelector('.btn-women').classList.remove('btn-onclick-right');
 // });
+
+function subscribeValidation() {
+    const email = document.getElementById('email').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email) {
+        alert('Please enter an email address');
+        return;
+    }
+
+    if (emailRegex.test(email)) {
+        const existingSuccessMessage = document.querySelector('.container');
+        if (existingSuccessMessage) {
+            existingSuccessMessage.remove();
+        }
+
+        const divSuccess = document.createElement('div');
+        divSuccess.classList.add('container');
+        divSuccess.innerHTML = '<p>Thank you for subscribing!</p>';
+
+        document.body.appendChild(divSuccess);
+    } else {
+        const divFailure = document.createElement('div');
+        divFailure.classList.add('container');
+        divFailure.innerHTML = '<p>The given email does not exist!</p>';
+
+        document.body.appendChild(divFailure);
+    }
+}
