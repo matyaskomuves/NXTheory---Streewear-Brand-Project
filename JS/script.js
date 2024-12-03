@@ -1,3 +1,17 @@
+//Welcome Screen 
+document.addEventListener('DOMContentLoaded', () => {
+    window.onload = () => {
+        const welcomeScreen = document.getElementById('welcomeScreen');
+
+        welcomeScreen.style.transition = 'opacity 5s ease-out';
+        welcomeScreen.style.opacity = '0';
+
+        setTimeout(() => {
+            welcomeScreen.style.display = 'none';
+            welcomeScreen.remove()
+        }, 5000);
+    };
+});
 // Scroll Effect with Intersection Observer
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -11,6 +25,7 @@ document.querySelectorAll('.notInView').forEach(el => {
     observer.observe(el);
 });
 
+//Subscription Email Validation
 function subscribeValidation() {
     const email = document.getElementById('email').value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

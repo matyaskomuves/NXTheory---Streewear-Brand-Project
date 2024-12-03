@@ -23,6 +23,21 @@ ul {
     list-style-type: none;
 }
 
+/* Welcome Screen */
+
+#welcomeScreen {
+    position: fixed;
+    background-color: var(--color-bg);
+    padding: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+}
+
+.welcome-heading {
+    animation: fadeInMen 1s ease 0s 1 normal forwards;
+}
+
 /* Nav Bar */
 
 .navbar {
