@@ -34,8 +34,13 @@ ul {
     z-index: 999;
 }
 
-.welcome-heading {
-    animation: fadeInMen 1s ease 0s 1 normal forwards;
+.loading-circle {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px dotted var(--color-accent);
+    animation: loadingCircle 1s infinite ease-in-out;
 }
 
 /* Nav Bar */
@@ -209,6 +214,18 @@ ul {
 }
 
 /* Animations */
+
+@keyframes loadingCircle {
+    0% {
+        scale: 0;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        scale: 1;
+        transform: rotate(180deg);
+    }
+}
 
 @keyframes navFadeIn {
     0% {
