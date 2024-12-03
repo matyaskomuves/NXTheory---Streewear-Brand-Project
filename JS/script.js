@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onload = () => {
         const welcomeScreen = document.getElementById('welcomeScreen');
 
-        welcomeScreen.style.transition = 'opacity 5s ease-out';
+        welcomeScreen.style.transition = 'opacity 3s ease-out';
         welcomeScreen.style.opacity = '0';
 
         setTimeout(() => {
             welcomeScreen.style.display = 'none';
             welcomeScreen.remove()
-        }, 5000);
+        }, 3000);
     };
 });
 // Scroll Effect with Intersection Observer
